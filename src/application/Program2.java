@@ -7,16 +7,19 @@ import model.entities.Department;
 public class Program2 {
 
 	public static void main(String[] args) {
-		
+
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
-		
+
 		System.out.println("=== DEPARTMENT TESTS ===");
-		
+/*
 		System.out.println("=== TEST 1: Department insert ===");
 		Department newDepartment = new Department(null, "Logistics");
 		departmentDao.insert(newDepartment);
 		System.out.println("Department inserted! Id = " + newDepartment.getId());
-
+*/
+		System.out.println("=== TEST 1: Department findById ===");
+		Department dep = departmentDao.findById(2);
+		System.out.println(dep);
 
 	}
 
