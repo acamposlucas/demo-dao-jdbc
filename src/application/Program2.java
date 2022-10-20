@@ -22,15 +22,19 @@ public class Program2 {
 		System.out.println("Department inserted! Id = " + newDepartment.getId());
 
 		System.out.println("=== TEST 2: Department findById ===");
-		Department dep = departmentDao.findById(2);
+		Department dep = departmentDao.findById(10);
 		System.out.println(dep);
 		
 		System.out.println("=== TEST 3: Department deleteById ===");
 		System.out.print("Enter id to be deleted: ");
 		int id = sc.nextInt();
 		departmentDao.deleteById(id);
-		System.out.println("Id " + id + "deleted");
+		System.out.println("Id " + id + " deleted");
 		
+		System.out.println("=== TEST 4: Department update ===");
+		dep.setName("Oil and Gas");
+		departmentDao.update(dep);
+
 		sc.close();
 
 	}
